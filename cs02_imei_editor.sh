@@ -11,8 +11,16 @@
 # https://en.wikipedia.org/wiki/International_Mobile_Equipment_Identity
 #
 # I take NO responsibility of anything done with this tool!
+# This tool is made to fix bricked SM-G350 using another SM-G350's CAL partition.
+# It is illegal to change IMEI in some coutries but this can also be an exceptions
+# because our intention is to keep the old IMEI.
 
-cs02tac=35849505 # This is the Type Allocation Code of Samsung Galaxy Core Plus SM-G3500 [cs02]
+# Type Allocation Code list for SM-G350 (INCOMPLETE!)
+# - 35849505
+# - 35752806
+# - 35505906
+
+cs02tac=35849505 # This is one of many TAC's for SM-G350. _Change this if needed!_
 
 # Get offset
 if [ $2 ] && [ -f $2 ]; then
@@ -31,7 +39,7 @@ echo "---------------"
 case $1 in
 -p|--print)
     if [ $imeitac != $cs02tac ]; then
-	echo "This is NOT a valid SM-G350 [cs02] CAL image!"
+	echo "This is NOT a valid SM-G350 [cs02] CAL image! Edit TAC from the script?"
 	exit 1
     fi
     echo "File: $2"
