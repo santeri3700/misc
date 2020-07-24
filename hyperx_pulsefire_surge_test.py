@@ -32,27 +32,31 @@ dpi_1 = 0x0a # 0x0a = 500  dpi
 dpi_2 = 0x14 # 0x14 = 1000 dpi
 dpi_3 = 0x1e # 0x1e = 1500 dpi
 
-# Color
-red = 0x00
-green = 0xff
-blue = 0x00
+# Colors
+red_1 = 0xff
+green_1 = 0x00
+blue_1 = 0x00
+
+red_2 = 0x00
+green_2 = 0x00
+blue_2 = 0xff
 
 # DPI selector flash color
-dpi_r = 0xff
+dpi_r = 0x00
 dpi_g = 0xff
 dpi_b = 0x00
 
 # Unknown RGB values
-rgb1_r = 0xff
-rgb1_g = 0x00
+rgb1_r = 0x00
+rgb1_g = 0xff
 rgb1_b = 0x00
 
-rgb2_r = 0xff
-rgb2_g = 0x00
+rgb2_r = 0x00
+rgb2_g = 0xff
 rgb2_b = 0x00
 
-rgb3_r = 0xff
-rgb3_g = 0x00
+rgb3_r = 0x00
+rgb3_g = 0xff
 rgb3_b = 0x00
 
 # Effect
@@ -111,13 +115,13 @@ data_packet3 = [
 0x00, 0x02, 0xf3, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00,
 0x01, effect, 0x03, 0x03, 0x03, 0x00, 0x28, 0x00, 0x28, 0x00, 0x28, 0x00, 0x28, 0x28, 0x00, 0x00,
 0xf0, 0x00, 0xf0, 0x00, dpi_r, dpi_g, dpi_b, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, rgb1_r, 0x00, 0x00,
-rgb1_g, 0x00, 0x00, rgb1_b, 0x00, 0x00, red, red, red, red, red, red, red, red, red, red,
-red, red, red, red, red, red, red, red, red, red, red, red, red, red, red, red,
-red, red, red, red, red, red, green, green, green, green, green, green, green, green, green, green,
-green, green, green, green, green, green, green, green, green, green, green, green, green, green, green, green,
-green, green, green, green, green, green, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue,
-blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue,
-blue, blue, blue, blue, blue, blue, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, rgb2_r, 0x00, 0x00, rgb2_g,
+rgb1_g, 0x00, 0x00, rgb1_b, 0x00, 0x00, red_1, red_1, red_1, red_1, red_1, red_1, red_1, red_1, red_1, red_1,
+red_1, red_1, red_1, red_1, red_1, red_1, red_2, red_2, red_2, red_2, red_2, red_2, red_2, red_2, red_2, red_2,
+red_2, red_2, red_2, red_2, red_2, red_2, green_1, green_1, green_1, green_1, green_1, green_1, green_1, green_1, green_1, green_1,
+green_1, green_1, green_1, green_1, green_1, green_1, green_2, green_2, green_2, green_2, green_2, green_2, green_2, green_2, green_2, green_2,
+green_2, green_2, green_2, green_2, green_2, green_2, blue_1, blue_1, blue_1, blue_1, blue_1, blue_1, blue_1, blue_1, blue_1, blue_1,
+blue_1, blue_1, blue_1, blue_1, blue_1, blue_1, blue_2, blue_2, blue_2, blue_2, blue_2, blue_2, blue_2, blue_2, blue_2, blue_2,
+blue_2, blue_2, blue_2, blue_2, blue_2, blue_2, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, rgb2_r, 0x00, 0x00, rgb2_g,
 0x00, 0x00, rgb2_b, 0x00, 0x00, rgb3_r, 0x00, 0x00, rgb3_g, 0x00, 0x00, rgb3_b, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 ]
@@ -126,11 +130,7 @@ blue, blue, blue, blue, blue, blue, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, rgb2_r, 
 #print(str(data_packet1))
 #print("\n")
 
-print("RED    : " + str(red) + " (" + format(red, '#04x') + ")")
-print("GREEN  : " + str(green) + " (" + format(green, '#04x') + ")")
-print("BLUE   : " + str(blue) + " (" + format(blue, '#04x') + ")")
 print("EFFECT : " + str(effect) + " (" + format(effect, '#04x') + ")")
-
 print("DPI_1: " + str(dpi_1) + " (" + format(dpi_1, '#04x') + ")")
 print("DPI_2: " + str(dpi_2) + " (" + format(dpi_2, '#04x') + ")")
 print("DPI_3: " + str(dpi_3) + " (" + format(dpi_3, '#04x') + ")")
